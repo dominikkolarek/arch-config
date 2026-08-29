@@ -1,6 +1,6 @@
 # arch-dotfiles
 
-Arch Linux + Hyprland configuration for a VAIO Pro PG (VJPG11C11N).
+Arch Linux + Hyprland configuration
 
 - Hyprland + hyprbars
 - Waybar (Catppuccin-derived green palette)
@@ -121,12 +121,8 @@ sudo systemctl enable --now snapper-cleanup.timer
 Not in this repo, by design:
 
 - SSH keys (`~/.ssh/`)
-- Discord bot `config.yaml` (API keys)
 - Wi-Fi credentials (NetworkManager, `/etc/NetworkManager/system-connections/`)
 
 ### Hardware notes
 
 - JIS keyboard: `KEYMAP=jp106` in `/etc/vconsole.conf`, `kb_layout = jp` in Hyprland
-- Real S3 suspend, not modern standby — hibernation works properly
-- Fingerprint reader is unsupported on Linux
-- BIOS/firmware updates are Windows-only via VAIO's updater
