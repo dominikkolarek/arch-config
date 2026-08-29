@@ -1,0 +1,120 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 0,
+
+    "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+    "modules-center": ["clock","custom/previous", "custom/next", "custom/musictrack","custom/cava"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "1", "2": "2", "3": "3", "4": "4",
+            "default": "•"
+        }
+    },
+    
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/cava-waybar.py"
+    },
+ 
+    "custom/musictrack": {
+        "format": "󰎇 {}",
+        "max-length": 60,
+        "interval": 5,
+        "exec": "playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null || echo ''",
+        "on-click": "playerctl play-pause"
+    },
+
+    "custom/previous": {
+        "format": "{}",
+        "interval": 5,
+        "exec": "playerctl metadata --format '{{title}}' >/dev/null 2>&1 && echo '󰒮' || echo ''",
+        "on-click": "playerctl previous"
+    },
+
+    "custom/next": {
+        "format": "{}",
+        "interval": 5,
+        "exec": "playerctl metadata --format '{{title}}' >/dev/null 2>&1 && echo '󰒭' || echo ''",
+        "on-click": "playerctl next"
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "icon-theme": "Papirus-Dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": ["kitty-dropdown"],
+        "spacing": 2
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 45,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %d %B %Y}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀 wired",
+        "format-disconnected": "󰤭 offline",
+        "tooltip-format": "{ipaddr}"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱 {device_alias}",
+        "format-disabled": "󰂯",
+        "format-off": "󰂯",
+        "tooltip-format": "{device_alias}\n{device_battery_percentage}%",
+        "on-click": "blueman-manager"
+    },
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 3
+    },
+
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "tooltip-format": "{used:0.1f}G / {total:0.1f}G",
+        "interval": 3
+    },
+
+    "temperature": {
+        "critical-threshold": 82,
+        "format": "󰔏 {temperatureC}°C",
+        "format-critical": "󰸁 {temperatureC}°C"
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
+        "tooltip-format": "{timeTo}\n{power}W"
+    }
+}

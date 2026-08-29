@@ -1,0 +1,23 @@
+# Secrets — never commit these
+.ssh/
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+config.yaml
+.env
+*token*
+*secret*
+
+# Runtime junk that should not be tracked
+home/.config/**/cache/
+home/.config/**/*.log
+home/.config/hypr/hyprland.log
+home/.config/waybar/*.log
+*.db
+*.sqlite
+
+# Editor / OS noise
+*.swp
+*~
+.DS_Store

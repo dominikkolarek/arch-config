@@ -1,0 +1,8 @@
+set linenumbers
+set numbercolor green
+set constantshow
+set tabsize 4
+set tabstospaces
+set softwrap
+set titlecolor black,green
+set mouse
