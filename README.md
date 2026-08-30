@@ -3,12 +3,12 @@
 Arch Linux + Hyprland configuration
 
 - Hyprland + hyprbars
-- Waybar (Catppuccin-derived green palette)
+- Waybar
 - kitty, wofi, mako
 - awww wallpaper daemon
 - cava visualiser in the bar
 - btrfs + snapper, zram + hibernation
-
+![The hyprland look](example1.png)
 ## Restoring onto a fresh install
 
 ```
@@ -65,7 +65,7 @@ Mount options for all btrfs subvolumes except `@swap`:
 noatime,compress=zstd:1,ssd,discard=async
 ```
 
-`@swap` uses `noatime` only — no compression on swap.
+`@swap` uses `noatime` only, no compression on swap.
 
 ### Bootloader
 
