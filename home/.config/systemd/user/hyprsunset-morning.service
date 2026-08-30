@@ -1,0 +1,6 @@
+[Unit]
+Description=Normal screen temperature
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hyprctl hyprsunset temperature 6500

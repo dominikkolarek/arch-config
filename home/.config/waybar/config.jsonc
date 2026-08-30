@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock","custom/previous", "custom/next", "custom/musictrack","custom/cava"],
-    "modules-right": ["pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -18,6 +18,14 @@
             "1": "1", "2": "2", "3": "3", "4": "4",
             "default": "•"
         }
+    },
+
+    "custom/updates": {
+        "format": "󰚰 {}",
+        "interval": 3600,
+        "exec": "checkupdates 2>/dev/null | wc -l | grep -v '^0$' || echo ''",
+        "on-click": "kitty -e yay -Syu",
+        "tooltip-format": "Updates available"
     },
     
     "custom/cava": {

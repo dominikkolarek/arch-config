@@ -25,6 +25,7 @@ PATHS=(
     ".config/environment.d"
     ".config/systemd/user"
     ".config/uwsm"
+    ".config/rofi"
     ".bashrc"
     ".bash_profile"
     ".gitconfig"

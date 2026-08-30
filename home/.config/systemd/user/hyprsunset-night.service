@@ -1,0 +1,6 @@
+[Unit]
+Description=Warm screen temperature
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hyprctl hyprsunset temperature 4000

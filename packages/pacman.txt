@@ -1,4 +1,5 @@
 awww
+baobab
 base
 base-devel
 blueman
@@ -10,15 +11,18 @@ cava
 cmake
 discord
 fastfetch
+file-roller
 firefox
 git
 grim
 hypridle
 hyprland
 hyprlock
+hyprsunset
 imagemagick
 intel-media-driver
 intel-ucode
+jq
 kitty
 libva-utils
 linux
@@ -30,10 +34,12 @@ man-pages
 mesa
 meson
 nano
+ncdu
 networkmanager
 noto-fonts
 noto-fonts-emoji
 openssh
+pacman-contrib
 papirus-icon-theme
 pavucontrol
 pipewire
@@ -44,6 +50,7 @@ playerctl
 polkit-gnome
 qt5-wayland
 qt6-wayland
+rofi
 slurp
 snap-pac
 snapper
