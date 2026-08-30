@@ -219,7 +219,7 @@ if hl.plugin.hyprbars ~= nil then
         fg_color = "rgb(8ab88c)",
         size     = 26,
         icon     = "󰅖",
-        action   = "hyprctl dispatch killactive",
+        action   = home .. "/.local/bin/hypr-close",
     })
 
     hl.plugin.hyprbars.add_button({
@@ -227,7 +227,7 @@ if hl.plugin.hyprbars ~= nil then
         fg_color = "rgb(6b8f6d)",
         size     = 26,
         icon     = "󰊓",
-        action   = "hyprctl dispatch fullscreen 1",
+        action   = home .. "/.local/bin/hypr-max",
     })
 end
 

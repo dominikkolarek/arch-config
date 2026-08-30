@@ -21,3 +21,4 @@ home/.config/waybar/*.log
 *.swp
 *~
 .DS_Store
+.gitconfig

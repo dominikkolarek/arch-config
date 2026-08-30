@@ -11,4 +11,5 @@ idx=$(jq -r '.[] | select(.mapped) | "\(.title)\u0000icon\u001f\(.class | ascii_
 
 [[ -n "${idx:-}" ]] || exit 0
 
-hyprctl dispatch focuswindow "address:${addresses[$idx]}"
+
+hyprctl dispatch "hl.dsp.focus({ window = '${addresses[$idx]}' })"
