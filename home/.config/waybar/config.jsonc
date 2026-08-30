@@ -30,7 +30,7 @@
     
     "custom/cava": {
         "format": "{}",
-        "exec": "~/.config/waybar/scripts/cava-waybar.py"
+        "exec": "/home/dominik/.config/waybar/scripts/cava-waybar.py"
     },
  
     "custom/musictrack": {
