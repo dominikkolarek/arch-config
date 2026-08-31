@@ -3,6 +3,27 @@
 
 local home = os.getenv("HOME") or ""
 
+local colors = {}
+do
+    local f = io.open(home .. "/.config/hypr/colors.lua", "r")
+    if f then
+        local content = f:read("a")
+        f:close()
+        for key, value in content:gmatch('([%w_]+)%s*=%s*"([^"]+)"') do
+            colors[key] = value
+        end
+    end
+end
+
+if not colors.accent then
+    colors = {
+        accent = "rgba(8ab88cff)", dim = "rgba(6b8f6dff)",
+        muted = "rgba(3a5140ff)", bg = "rgba(0f1610ee)",
+        bg_plain = "rgb(0f1610)", accent_plain = "rgb(8ab88c)",
+        dim_plain = "rgb(6b8f6d)",
+    }
+end
+
 ------------------
 ---- MONITORS ----
 ------------------
@@ -44,8 +65,8 @@ hl.config({
         layout      = "dwindle",
 
         col = {
-            active_border   = "rgba(8ab88cff)",
-            inactive_border = "rgba(3a5140ff)",
+            active_border   = colors.accent,
+            inactive_border = colors.muted,
         },
     },
 
@@ -117,6 +138,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(home .. "/.local/bin/set-wallpaper --random"))
 
 -- AirPods
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("bluetoothctl connect CC:4B:04:59:47:CB"))
@@ -196,7 +218,7 @@ if hl.plugin.hyprbars ~= nil then
                 bar_height                 = 40,
                 bar_padding                = 12,
                 bar_button_padding         = 12,
-                bar_color                  = "rgba(0f1610ee)",
+                bar_color                  = colors.bg,
                 bar_blur                   = false,
                 bar_title_enabled          = true,
                 bar_text_size              = 14,
@@ -207,7 +229,7 @@ if hl.plugin.hyprbars ~= nil then
                 bar_precedence_over_border = true,
                 icon_on_hover              = false,
                 col = {
-                    text = "rgba(8ab88cff)",
+                    text = colors.accent,
                 },
             },
         },
@@ -217,7 +239,7 @@ if hl.plugin.hyprbars ~= nil then
     -- Matching it to bar_color makes the circle disappear.
     hl.plugin.hyprbars.add_button({
         bg_color = "rgba(00000000)",
-        fg_color = "rgb(8ab88c)",
+        fg_color = colors.accent_plain,
         size     = 26,
         icon     = "󰅖",
         action   = home .. "/.local/bin/hypr-close",
@@ -225,7 +247,7 @@ if hl.plugin.hyprbars ~= nil then
 
     hl.plugin.hyprbars.add_button({
         bg_color = "rgba(00000000)",
-        fg_color = "rgb(6b8f6d)",
+        fg_color = colors.dim_plain,
         size     = 26,
         icon     = "󰊓",
         action   = home .. "/.local/bin/hypr-max",
@@ -242,7 +264,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("mako")
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("awww-daemon")
-    hl.exec_cmd("sh -c 'sleep 1 && awww img " .. home .. "/Pictures/wallpapers/wall.png'")
+    hl.exec_cmd("sh -c 'sleep 1 && " .. home .. "/.local/bin/set-wallpaper --regen'")
     hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("hyprsunset")
 end)

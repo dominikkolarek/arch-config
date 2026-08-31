@@ -8,7 +8,11 @@ Arch Linux + Hyprland configuration
 - awww wallpaper daemon
 - cava visualiser in the bar
 - btrfs + snapper, zram + hibernation
-![The hyprland look](example1.png)
+- automatic accent colors based on wallpaper including hypr, waybar, kitty, nano.. (inspired by https://github.com/hakuimaku/hakuspace)
+https://github.com/user-attachments/assets/851f1054-8877-4344-8cdf-acfdefad8f13
+https://github.com/user-attachments/assets/aff718a9-55de-4eb7-9ea4-067296356bec
+https://github.com/user-attachments/assets/73c99615-4692-4443-ab92-d4fb59aa81dd
+https://github.com/user-attachments/assets/c1da9946-c16a-49a7-ae5b-4d2ca68751a6
 ## Restoring onto a fresh install
 
 ```
@@ -126,3 +130,18 @@ Not in this repo, by design:
 ### Hardware notes
 
 - JIS keyboard: `KEYMAP=jp106` in `/etc/vconsole.conf`, `kb_layout = jp` in Hyprland
+
+### Keybinds
+*SUPER is Win key*
+
+```
+SUPER + Q - Opens a terminal window
+SUPER + W - Changes a wallpaper to a random image in home/Pictures/wallpapers
+SUPER + E - Opens Thunar file explorer
+SUPER + R - Opens app launcher
+SUPER + F - Fullscreens window
+SUPER + C - Closes active window
+SUPER + M - Exits out of Hyprland
+SUPER + V - Floats a window 
+SUPER + 1-4 - Switches workspaces
+

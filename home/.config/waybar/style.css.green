@@ -1,0 +1,170 @@
+/* Palette built around #8ab88c
+   ---------------------------------
+   #0f1610  darkest   bar background
+   #17211a  dark      module pill background
+   #22301f  mid       hover background
+   #3a5140  muted     borders / inactive
+   #6b8f6d  dim       secondary text
+   #8ab88c  base      primary accent
+   #a9cfaa  light     bright accent
+   #c6e2c5  lightest  text on dark
+   #4a2a2a  warn bg   critical background
+*/
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-left, .modules-center, .modules-right {
+    background: #0f1610;
+    border-radius: 10px;
+    padding: 0 6px;
+}
+
+#workspaces button {
+    color: #6b8f6d;
+    padding: 0 9px;
+    margin: 4px 2px;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #0f1610;
+    background: #8ab88c;
+}
+
+#workspaces button:hover {
+    background: #22301f;
+    color: #c6e2c5;
+}
+
+#taskbar {
+    padding: 0 4px;
+}
+
+#taskbar button {
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 7px;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+#taskbar button.active {
+    background: #22301f;
+    box-shadow: inset 0 -2px 0 #8ab88c;
+}
+
+#taskbar button:hover {
+    background: #17211a;
+}
+
+#window {
+    color: #6b8f6d;
+    padding: 0 10px;
+    font-style: italic;
+}
+
+#clock {
+    color: #a9cfaa;
+    padding: 0 14px;
+    font-weight: 600;
+}
+
+#updates, #pulseaudio, #network, #bluetooth, #cpu, #memory, #temperature, #battery, #language, #custom-musictrack {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 7px;
+    background: #17211a;
+}
+
+#updates      { color: #a9cfaa; }
+#pulseaudio   { color: #a9cfaa; }
+#network      { color: #8ab88c; }
+#cpu          { color: #c6e2c5; }
+#memory       { color: #6b8f6d; }
+#temperature  { color: #a9cfaa; }
+#battery      { color: #8ab88c; }
+#bluetooth    { color: #8ab88c; }
+#language     { color: #8ab88c; }
+
+#bluetooth.disabled, #bluetooth.off, #bluetooth.disconnected { color: #3a5140; }
+
+#custom-musictrack {
+    color: #a9cfaa;
+    font-style: italic;
+}
+
+#custom-previous, #custom-next {
+    color: #8ab88c;
+    padding: 0 8px;
+    margin: 4px 1px;
+    border-radius: 7px;
+    background: #17211a;
+    font-size: 15px;
+}
+
+#custom-previous:hover,
+#custom-next:hover,
+#custom-musictrack:hover,
+#updates:hover,
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#battery:hover,
+#language:hover,
+#custom-cava:hover {
+    background: #22301f;
+    color: #c6e2c5;
+}
+
+#custom-cava {
+    color: #8ab88c;
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 7px;
+    background: #17211a;
+    font-size: 14px;
+}
+
+#tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 7px;
+    background: #17211a;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#battery.warning  { color: #c6e2c5; }
+#battery.critical { color: #d98d8d; background: #4a2a2a; }
+
+#temperature.critical { color: #d98d8d; background: #4a2a2a; }
+
+tooltip {
+    background: #0f1610;
+    border: 1px solid #3a5140;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #c6e2c5;
+}

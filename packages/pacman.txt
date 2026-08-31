@@ -52,7 +52,9 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 playerctl
+plocate
 polkit-gnome
+python-colorthief
 python-pip
 python-virtualenv
 qt5-wayland
