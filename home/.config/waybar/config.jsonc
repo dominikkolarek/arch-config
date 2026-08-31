@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock","custom/previous", "custom/next", "custom/musictrack","custom/cava"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "hyprland/language", "tray"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -124,5 +124,17 @@
         "format-charging": "󰂄 {capacity}%",
         "format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
         "tooltip-format": "{timeTo}\n{power}W"
-    }
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8,
+        "show-passive-items": true,
+        "icon-theme": "Papirus-Dark"
+    },
+
 }

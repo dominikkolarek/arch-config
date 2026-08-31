@@ -81,7 +81,7 @@ window#waybar {
     font-weight: 600;
 }
 
-#updates, #pulseaudio, #network, #bluetooth, #cpu, #memory, #temperature, #battery, #custom-musictrack {
+#updates, #pulseaudio, #network, #bluetooth, #cpu, #memory, #temperature, #battery, #language, #custom-musictrack {
     padding: 0 10px;
     margin: 4px 2px;
     border-radius: 7px;
@@ -96,6 +96,7 @@ window#waybar {
 #temperature  { color: #a9cfaa; }
 #battery      { color: #8ab88c; }
 #bluetooth    { color: #8ab88c; }
+#language     { color: #8ab88c; }
 
 #bluetooth.disabled, #bluetooth.off, #bluetooth.disconnected { color: #3a5140; }
 
@@ -123,6 +124,7 @@ window#waybar {
 #memory:hover,
 #temperature:hover,
 #battery:hover,
+#language:hover,
 #custom-cava:hover {
     background: #22301f;
     color: #c6e2c5;
@@ -135,6 +137,21 @@ window#waybar {
     border-radius: 7px;
     background: #17211a;
     font-size: 14px;
+}
+
+#tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 7px;
+    background: #17211a;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
 }
 
 #battery.warning  { color: #c6e2c5; }

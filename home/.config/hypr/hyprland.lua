@@ -92,7 +92,8 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout    = "jp",
+        kb_layout = "jp,hr",
+        kb_options = "caps:capslock,grp:alt_shift_toggle",
         follow_mouse = 1,
 
         touchpad = {
@@ -243,4 +244,5 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("sh -c 'sleep 1 && awww img " .. home .. "/Pictures/wallpapers/wall.png'")
     hl.exec_cmd("hyprpm reload -n")
+    hl.exec_cmd("hyprsunset")
 end)
