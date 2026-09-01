@@ -82,7 +82,7 @@ window#waybar {
 #memory,
 #temperature,
 #battery,
-#language,
+#custom-language,
 #custom-musictrack {
     padding: 0 10px;
     margin: 4px 2px;
@@ -99,7 +99,7 @@ window#waybar {
 #temperature { color: @light; }
 #battery     { color: @accent; }
 #bluetooth   { color: @accent; }
-#language    { color: @dim; }
+#custom-language    { color: @dim; }
 
 #bluetooth.disabled,
 #bluetooth.off,
@@ -143,7 +143,7 @@ window#waybar {
 #memory:hover,
 #temperature:hover,
 #battery:hover,
-#language:hover {
+#custom-language:hover {
     background: @hover;
     color: @lightest;
 }

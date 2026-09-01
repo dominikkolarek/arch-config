@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock","custom/previous", "custom/next", "custom/musictrack","custom/cava"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "hyprland/language", "tray"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "custom/language", "tray"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -126,8 +126,10 @@
         "tooltip-format": "{timeTo}\n{power}W"
     },
 
-    "hyprland/language": {
-        "format": "{short}"
+    "custom/language": {
+        "format": "{}",
+        "interval": 2,
+        "exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main) | .active_keymap' | sed 's/Japanese/JP/;s/Croatian/HR/'"
     },
 
     "tray": {

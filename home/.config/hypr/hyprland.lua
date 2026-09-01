@@ -139,6 +139,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(home .. "/.local/bin/set-wallpaper --random"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- AirPods
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("bluetoothctl connect CC:4B:04:59:47:CB"))
@@ -267,4 +268,5 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("sh -c 'sleep 1 && " .. home .. "/.local/bin/set-wallpaper --regen'")
     hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("hyprsunset")
+    hl.exec_cmd("hypridle")
 end)
