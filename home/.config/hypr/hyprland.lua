@@ -140,7 +140,10 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(home .. "/.local/bin/set-wallpaper --random"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
-
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(
+    "sh -c 'cliphist list | wofi --dmenu | cliphist decode | wl-copy'"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(home .. "/.local/bin/power-menu"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("hyprctl dispatch 'hl.plugin.hyprexpo.expo(\"toggle\")'"))
 -- AirPods
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("bluetoothctl connect CC:4B:04:59:47:CB"))
 
@@ -233,6 +236,32 @@ if hl.plugin.hyprbars ~= nil then
                     text = colors.accent,
                 },
             },
+            hyprexpo = {
+                columns = 2,
+                bg_col = colors.bg,
+                workspace_method = "first 1",
+                gesture_fingers = 3,
+                gesture_distance = 300,
+            },
+            dynamic_cursors = {
+                enabled = true,
+                mode = "rotate",
+                threshold = 2,
+
+                stretch = {
+                    limit = 3000,
+                },
+
+                shake = {
+                    enabled = true,
+                    threshold = 6.0,
+                    base = 4.0,
+                    speed = 4.0,
+                    influence = 0.0,
+                    limit = 0.0,
+                    timeout = 2000,
+                },
+            },
         },
     })
 
@@ -269,4 +298,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("hypridle")
+    hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    hl.exec_cmd("wl-paste --type image --watch cliphist store")
 end)

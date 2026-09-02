@@ -145,4 +145,5 @@ SUPER + C - Closes active window
 SUPER + M - Exits out of Hyprland
 SUPER + V - Floats a window 
 SUPER + 1-4 - Switches workspaces
-
+SUPER + SHIFT + V - Clipboard history
+SUPER + O - Hyprexpo

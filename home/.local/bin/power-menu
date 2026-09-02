@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+choice=$(printf '󰌾  Lock\n󰤄  Suspend\n󰒲  Hibernate\n󰜉  Reboot\n󰐥  Shutdown\n󰗽  Log out' \
+    | wofi --dmenu --prompt "Power" --width 260 --height 260 --cache-file /dev/null)
+
+case "$choice" in
+    *Lock)      hyprlock ;;
+    *Suspend)   systemctl suspend ;;
+    *Hibernate) systemctl hibernate ;;
+    *Reboot)    systemctl reboot ;;
+    *Shutdown)  systemctl poweroff ;;
+    *"Log out") hyprctl dispatch 'hl.dsp.exit()' ;;
+esac
