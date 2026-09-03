@@ -1,4 +1,3 @@
 visual-studio-code-bin
-waybar-git
 yay-bin
 yay-bin-debug

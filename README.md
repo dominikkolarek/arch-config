@@ -4,7 +4,7 @@ Arch Linux + Hyprland configuration
 
 - Hyprland + hyprbars
 - Waybar
-- kitty, wofi, mako
+- kitty, swaync
 - awww wallpaper daemon
 - cava visualiser in the bar
 - btrfs + snapper, zram + hibernation
@@ -147,3 +147,4 @@ SUPER + V - Floats a window
 SUPER + 1-4 - Switches workspaces
 SUPER + SHIFT + V - Clipboard history
 SUPER + O - Hyprexpo
+SUER + X - Power menu

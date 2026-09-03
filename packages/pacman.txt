@@ -1,3 +1,4 @@
+adw-gtk-theme
 awww
 baobab
 base
@@ -16,6 +17,7 @@ fastfetch
 file-roller
 firefox
 git
+gnome-themes-extra
 grim
 hypridle
 hyprland
@@ -32,7 +34,6 @@ libva-utils
 linux
 linux-firmware
 linux-lts
-mako
 man-db
 man-pages
 mesa
@@ -68,12 +69,14 @@ sof-firmware
 spotify-launcher
 steam
 sudo
+swaync
 texinfo
 thunar
 ttf-jetbrains-mono-nerd
 vim
 vulkan-intel
 vulkan-tools
+waybar
 wev
 wireplumber
 wl-clipboard

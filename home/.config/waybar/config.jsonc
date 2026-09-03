@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock","custom/previous", "custom/next", "custom/musictrack","custom/cava"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "custom/language", "tray"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "custom/language", "tray","custom/notifications"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -137,6 +137,15 @@
         "spacing": 8,
         "show-passive-items": true,
         "icon-theme": "Papirus-Dark"
+    },
+
+    "custom/notifications": {
+        "format": "{}",
+        "exec": "swaync-client -swb",
+        "return-type": "json",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
     },
 
 }

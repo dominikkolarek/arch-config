@@ -51,7 +51,7 @@ local menu        = "wofi --show drun"
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-
+hl.env("GTK_THEME", "adw-gtk3-dark")
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -174,10 +174,6 @@ hl.bind("ALT + SHIFT + TAB", function()
     hl.dispatch(hl.dsp.window.bring_to_top())
 end, { repeating = true, description = "Previous window" })
 
--- Rofi window switcher
-hl.bind(mainMod .. " + TAB",
-    hl.dsp.exec_cmd(home .. "/.config/rofi/window-switcher.sh"))
-
 -- Brightness and volume
 hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl set 5%+"),
     { locked = true, repeating = true })
@@ -291,7 +287,7 @@ end
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
-    hl.exec_cmd("mako")
+    hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("sh -c 'sleep 1 && " .. home .. "/.local/bin/set-wallpaper --regen'")
