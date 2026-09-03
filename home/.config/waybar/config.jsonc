@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock","custom/previous", "custom/next", "custom/musictrack","custom/cava"],
-    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "custom/language", "tray","custom/notifications"],
+    "modules-right": ["custom/updates","backlight", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "custom/language", "tray","custom/notifications"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -76,6 +76,14 @@
         "format": "{:%H:%M}",
         "format-alt": "{:%A, %d %B %Y}",
         "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip-format": "Brightness {percent}%",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-"
     },
 
     "pulseaudio": {

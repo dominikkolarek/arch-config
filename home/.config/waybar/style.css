@@ -75,6 +75,7 @@ window#waybar {
 
 #tray,
 #updates,
+#backlight,
 #pulseaudio,
 #network,
 #bluetooth,
@@ -93,6 +94,7 @@ window#waybar {
 
 #tray        { color: @accent; }
 #updates     { color: @light; }
+#backlight { color: @light; }
 #pulseaudio  { color: @light; }
 #network     { color: @accent; }
 #cpu         { color: @lightest; }
@@ -139,6 +141,7 @@ window#waybar {
 #custom-cava:hover,
 #tray:hover,
 #updates:hover,
+#backlight:hover,
 #pulseaudio:hover,
 #network:hover,
 #bluetooth:hover,
