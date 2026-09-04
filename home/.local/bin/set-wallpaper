@@ -27,7 +27,7 @@ FASTFETCH_CONF = HOME / ".config/fastfetch/config.jsonc"
 SWAYNC_CSS = HOME / ".config/swaync/style.css"
 GTK3_CSS = HOME / ".config/gtk-3.0/gtk.css"
 GTK4_CSS = HOME / ".config/gtk-4.0/gtk.css"
-
+logo_img = HOME / "Pictures/the_fool.png"
 
 EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 
@@ -266,14 +266,35 @@ def write_hyprlock_colors(palette: dict[str, str]) -> None:
     HYPRLOCK_COLORS.write_text("\n".join(lines), encoding="utf-8")
 
 def write_fastfetch(palette: dict[str, str]) -> None:
+
     def ansi(hex_color: str) -> str:
         h = hex_color.lstrip("#")
         r, g, b = (int(h[i:i+2], 16) for i in (0, 2, 4))
         return f"38;2;{r};{g};{b}"
 
+    tinted = HOME / ".config/fastfetch/logo-tinted.png"
+
+    if logo_img.exists():
+        tinted.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run([
+            "magick", str(logo_img),
+            "-trim", "+repage",
+            "-fuzz", "20%", "-transparent", "white",
+            "-fill", palette["accent"], "-colorize", "100",
+            str(tinted),
+        ], check=False)
+        logo_conf = {
+            "source": str(tinted),
+            "type": "kitty-direct",
+            "width": 30,
+            "height": 15,
+            "padding": {"top": 1, "right": 3},
+        }
+    else:
+        logo_conf = {"type": "small", "padding": {"top": 1, "right": 3}}
     config = {
         "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-        "logo": {"type": "small", "padding": {"top": 1, "right": 3}},
+        "logo": logo_conf,
         "display": {"separator": "  "},
         "modules": [
             "break",

@@ -4,8 +4,8 @@
 @import "colors.css";
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
+    font-family: "Jim Nightshade", "JetBrainsMono Nerd Font";
+    font-size: 18px;
     font-weight: 500;
     border: none;
     border-radius: 0;
@@ -45,6 +45,8 @@ window#waybar {
 }
 
 #taskbar button {
+    font-family: "Jim Nightshade";
+    font-size: 19px;
     padding: 0 8px;
     margin: 4px 2px;
     border-radius: 7px;
@@ -62,13 +64,18 @@ window#waybar {
 }
 
 #window {
+    font-family: "Jim Nightshade";
+    font-size: 16px;
     color: @dim;
     padding: 0 10px;
     font-style: italic;
 }
 
 #clock {
+    font-family: "Jim Nightshade";
+    font-size: 25px;
     color: @light;
+    margin-top: 2.5px;
     padding: 0 14px;
     font-weight: 600;
 }
@@ -112,6 +119,8 @@ window#waybar {
 }
 
 #custom-musictrack {
+    font-family: "Jim Nightshade";
+    font-size: 23px;
     color: @light;
     font-style: italic;
 }
@@ -160,11 +169,14 @@ window#waybar {
 #temperature.critical { color: @warn; background: @warn-bg; }
 
 tooltip {
+    font-family: "Jim Nightshade";
     background: @bg;
     border: 1px solid @muted;
     border-radius: 8px;
 }
 
 tooltip label {
+    font-family: "Jim Nightshade";
+    font-size: 20px;
     color: @lightest;
 }

@@ -10,12 +10,14 @@ brightnessctl
 btop
 btrfs-progs
 cava
+chafa
 cliphist
 cmake
 discord
 fastfetch
 file-roller
 firefox
+flatpak
 git
 gnome-themes-extra
 grim
@@ -26,6 +28,7 @@ hyprsunset
 imagemagick
 intel-media-driver
 intel-ucode
+jp2a
 jq
 kitty
 lib32-mesa

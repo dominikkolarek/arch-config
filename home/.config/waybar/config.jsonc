@@ -79,7 +79,7 @@
     },
 
     "backlight": {
-        "format": "{icon} {percent}%",
+        "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "tooltip-format": "Brightness {percent}%",
         "on-scroll-up": "brightnessctl set 5%+",
@@ -94,10 +94,10 @@
     },
 
     "network": {
-        "format-wifi": "󰤨 {essid}",
-        "format-ethernet": "󰈀 wired",
-        "format-disconnected": "󰤭 offline",
-        "tooltip-format": "{ipaddr}"
+        "format-wifi": " ",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤭",
+        "tooltip-format-wifi": "{essid}\n{signalStrength}%\n{ipaddr}"
     },
 
     "bluetooth": {
