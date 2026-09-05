@@ -232,6 +232,14 @@ if hl.plugin.hyprbars ~= nil then
                     text = colors.accent,
                 },
             },
+            hyprexpo = {
+                columns = 2,
+                bg_col = colors.bg,
+                workspace_method = "first 1",
+                gesture_fingers = 3,
+                gesture_distance = 300,
+            },
+
             dynamic_cursors = {
                 enabled = true,
                 mode = "rotate",
