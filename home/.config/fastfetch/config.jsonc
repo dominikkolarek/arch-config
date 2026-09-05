@@ -17,7 +17,7 @@
     "break",
     {
       "type": "title",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "separator",
@@ -26,62 +26,62 @@
     {
       "type": "os",
       "key": "os",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "kernel",
       "key": "kernel",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "uptime",
       "key": "uptime",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "packages",
       "key": "pkgs",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "shell",
       "key": "shell",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "wm",
       "key": "wm",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "terminal",
       "key": "term",
-      "keyColor": "38;2;184;170;137"
+      "keyColor": "38;2;132;146;190"
     },
     {
       "type": "cpu",
       "key": "cpu",
-      "keyColor": "38;2;201;193;176"
+      "keyColor": "38;2;173;181;204"
     },
     {
       "type": "gpu",
       "key": "gpu",
-      "keyColor": "38;2;201;193;176"
+      "keyColor": "38;2;173;181;204"
     },
     {
       "type": "memory",
       "key": "mem",
-      "keyColor": "38;2;201;193;176"
+      "keyColor": "38;2;173;181;204"
     },
     {
       "type": "disk",
       "key": "disk",
-      "keyColor": "38;2;201;193;176"
+      "keyColor": "38;2;173;181;204"
     },
     {
       "type": "battery",
       "key": "bat",
-      "keyColor": "38;2;201;193;176"
+      "keyColor": "38;2;173;181;204"
     },
     "break",
     {

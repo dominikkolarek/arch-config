@@ -7,16 +7,16 @@ set tabstospaces
 set softwrap
 set mouse
 
-set titlecolor      #111,#ba8
-set numbercolor     #887
-set statuscolor     #111,#ba8
-set keycolor        #ba8
-set functioncolor   #ccb
+set titlecolor      #111,#89b
+set numbercolor     #679
+set statuscolor     #111,#89b
+set keycolor        #89b
+set functioncolor   #abc
 set promptcolor     #ddd,#111
-set selectedcolor   #111,#ccb
+set selectedcolor   #111,#abc
 set stripecolor     #444
-set scrollercolor   #ba8
-set spotlightcolor  #111,#ccb
+set scrollercolor   #89b
+set spotlightcolor  #111,#abc
 set minicolor       #ddd
 set errorcolor      #111,#d88
 
